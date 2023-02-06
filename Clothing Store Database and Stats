@@ -1,0 +1,25 @@
+--Create clothing store database
+
+CREATE TABLE store (id INTEGER PRIMARY KEY, name TEXT, color TEXT, size TEXT, amount INTEGER, price INTEGER);
+
+INSERT INTO store (id, name, color, size, amount, price) VALUES (1, "t shirts", "blue", "large", 5, 10);
+INSERT INTO store VALUES (2, "socks", "green", "small", 3, 5);
+INSERT INTO store VALUES (3, "pants", "blue", "large", 10, 25);
+INSERT INTO store VALUES (4, "polos", "white", "medium", 10, 15);
+INSERT INTO store VALUES (5, "shorts", "red", "small", 8, 12);
+INSERT INTO store VALUES (6, "jeans", "blue", "large", 9, 22);
+INSERT INTO store VALUES (7, "pants", "black", "large", 6, 25);
+INSERT INTO store VALUES (8, "shorts", "blue", "large", 8, 12);
+INSERT INTO store VALUES (9, "t shirts", "white", "medium", 10, 10);
+INSERT INTO store VALUES (10, "t shirts", "white", "large", 8, 10);
+INSERT INTO store VALUES (11, "polos", "blue", "large", 2, 15);
+INSERT INTO store VALUES (12, "jeans", "blue", "medium", 5, 25);
+INSERT INTO store VALUES (13, "shorts", "green", "medium", 3, 12);
+INSERT INTO store VALUES (14, "t shirts", "blue", "small", 7, 10);
+INSERT INTO store VALUES (15, "t shirts", "red", " small", 3, 5);
+
+--display database
+SELECT * FROM store;
+
+--items in inventory where the amount is more than 5, list ordered by ascending price
+SELECT * FROM store WHERE amount > 5 ORDER BY price ASC;
